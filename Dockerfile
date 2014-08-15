@@ -31,6 +31,7 @@ ADD ./start.sh /start.sh
 RUN chmod 755 /start.sh
 
 VOLUME /etc/nginx/sites-available/
+VOlUME /etc/nginx/certs/
 
 EXPOSE 80
 

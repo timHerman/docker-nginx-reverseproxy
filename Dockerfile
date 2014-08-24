@@ -19,7 +19,7 @@ RUN sed -i -e"s/keepalive_timeout\s*65/keepalive_timeout 2/" /etc/nginx/nginx.co
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 # nginx site conf
-ADD ./nginx-host.conf /etc/nginx/sites-available/default
+ADD ./nginx-host.conf /data/default
 
 # Supervisor Config
 RUN /usr/bin/easy_install supervisor
@@ -31,6 +31,7 @@ RUN chmod 755 /start.sh
 
 VOLUME /etc/nginx/sites-available/
 VOlUME /etc/nginx/certs/
+VOLUME /var/www/
 
 EXPOSE 80
 

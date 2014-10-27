@@ -29,9 +29,9 @@ ADD ./supervisord.conf /etc/supervisord.conf
 ADD ./start.sh /start.sh
 RUN chmod 755 /start.sh
 
-VOLUME /etc/nginx/sites-available/
-VOlUME /etc/nginx/certs/
-VOLUME /var/www/
+VOLUME /etc/nginx/sites-available
+VOlUME /etc/nginx/certs
+VOLUME /var/www
 
 EXPOSE 80
 
